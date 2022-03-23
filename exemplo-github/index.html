@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Lista de Tarefas</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Lista de Tarefas</h1>
+
+      <form id="task-form" onsubmit="addTask(event)">
+        <input 
+          type="text"
+          id="task-description"
+          placeholder="Digite a descrição da tarefa"
+          required>
+        
+        <button>Adicionar</button>
+      </form>
+
+      <div id="task-list-area">
+        <ul id="task-list"></ul>
+      </div>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
