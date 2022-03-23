@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "title";
+  src: url(./Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: "regular";
+  src: url(./Poppins-Regular.ttf);
+}
+
+body {
+  margin: 0;
+}
+
+#container {
+  width: 60%;
+  margin: 30px auto;
+  font-family: "regular";
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "title";
+}
+
+#loan-form {
+  margin: auto;
+  width: 60%;
+}
+
+#loan-form button {
+  color: white;
+  font-family: "title";
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.form-input {
+  display: flex;
+  width: 70%;
+  margin: 0 auto 10px auto;
+}
+
+.form-input input {
+  text-align: right;
+  font-family: "regular";
+  margin-left: auto;
+}
+
+.form-input select {
+  text-align: center;
+  font-family: "regular";
+  margin-left: auto;
+}
+
+#loan-value {
+  width: 250px;
+}
+
+#loan-installments {
+  width: 97px;
+}
+
+#client-type {
+  width: 183px;
+}
+
+#button-area {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#result {
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  font-family: "title";
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 150%;
+  }
+
+  #loan-form {
+    width: 100%;
+  }
+
+  .form-input {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-input input, 
+  .form-input select {
+    margin: auto;
+    text-align: center;
+    font-size: 120%;
+  }
+
+  .form-input label,
+  #button-area button,
+  #result {
+    font-size: 120%;
+  }
+
+
+}
+
+
+
