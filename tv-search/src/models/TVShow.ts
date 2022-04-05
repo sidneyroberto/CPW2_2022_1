@@ -1,4 +1,5 @@
 type TVShow = {
+  id: number
   name: string
   type: string
   language: string
@@ -11,6 +12,7 @@ type TVShow = {
 
 export const getTvShow = (objJson: any): TVShow => {
   const {
+    id,
     name,
     type,
     language,
@@ -34,6 +36,7 @@ export const getTvShow = (objJson: any): TVShow => {
   }
 
   const tvShow: TVShow = {
+    id,
     name,
     type,
     language,

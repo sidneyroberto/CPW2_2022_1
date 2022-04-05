@@ -9,27 +9,14 @@ const http = axios.create({
   baseURL: API_URL,
 })
 
-const renderSearchForm = (container: HTMLElement) => {
-  const htmlContent = `
-    <form id="search-form">
-        <input type="text" id="filter" placeholder="Digite o título da série">
-        <button>Pesquisar</button>
-    </form>
-    `
+const searchShows = async () => {
+  const params = new URLSearchParams(document.location.search)
+  const filter = params.get('filter')
 
-  container.innerHTML = htmlContent
-  const searchForm = <HTMLFormElement>$('#search-form')
-  searchForm.onsubmit = filter
-}
-
-const filter = async (event: Event) => {
-  event.preventDefault()
-  const filterInput = <HTMLInputElement>$('#filter')
-  const queryText = filterInput.value
-  if (queryText) {
+  if (filter) {
     const response = await http.get('/', {
       params: {
-        q: queryText,
+        q: filter,
       },
     })
 
@@ -44,6 +31,19 @@ const filter = async (event: Event) => {
       })
     }
   }
+}
+
+searchShows()
+
+const renderSearchForm = (container: HTMLElement) => {
+  const htmlContent = `
+    <form id="search-form">
+        <input type="text" id="filter" name="filter" placeholder="Digite o título da série">
+        <button>Pesquisar</button>
+    </form>
+    `
+
+  container.innerHTML = htmlContent
 }
 
 export default renderSearchForm
