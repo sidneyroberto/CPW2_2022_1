@@ -27,11 +27,15 @@ const onSubmitLoginForm = (event: Event) => {
       const { code } = error
 
       if (authStatuses.includes(code)) {
-        const errorParagraph = <HTMLParagraphElement>document.createElement('p')
-        errorParagraph.innerText = 'Credenciais inválidas'
+        let errorParagraph = <HTMLParagraphElement>$('#error-message')
+        if (!errorParagraph) {
+          errorParagraph = <HTMLParagraphElement>document.createElement('p')
+          errorParagraph.innerText = 'Credenciais inválidas'
+          errorParagraph.id = 'error-message'
 
-        const app = <HTMLDivElement>$('#app')
-        app.insertAdjacentElement('beforeend', errorParagraph)
+          const app = <HTMLDivElement>$('#app')
+          app.insertAdjacentElement('beforeend', errorParagraph)
+        }
       } else {
         console.log(code)
       }
