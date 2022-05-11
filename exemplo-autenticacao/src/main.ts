@@ -1,5 +1,5 @@
 import renderWelcomePanel from './components/Welcome'
-import './style.css'
+import './styles.css'
 
 const $ = document.querySelector.bind(document)
 const app = <HTMLDivElement>$('#app')

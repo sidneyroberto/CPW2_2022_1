@@ -1,6 +1,7 @@
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 
-import { firebaseApp } from '../config/firebase'
+import { firebaseApp } from '../../config/firebase'
+import './styles.css'
 
 const $ = document.querySelector.bind(document)
 
