@@ -1,3 +1,5 @@
+import './styles.css'
+
 const renderWelcomePanel = (container: HTMLElement) => {
   const htmlContent = `
     <div id="welcome">
