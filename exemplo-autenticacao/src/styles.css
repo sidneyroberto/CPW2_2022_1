@@ -11,3 +11,74 @@ body {
     font-family: 'regular';
     src: url(../fonts/Montserrat-Regular.ttf);
 }
+
+#redirect-link {
+    background-color: #bf55ec;
+    width: 400px;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    color: white;
+    font-family: 'bold';
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form {
+    width: 400px;
+    margin: 50px auto 0 auto;
+    box-shadow: 5px 5px 7px #d5b8ff, -1px -1px 2px #d5b8ff;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+form div {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}
+
+form label {
+    font-family: 'regular';
+}
+
+form input {
+    margin-left: auto;
+    height: 35px;
+    width: 280px;
+    border-radius: 5px;
+    border: 3px solid #f1e7fe;
+    font-family: 'regular';
+    font-size: 100%;
+    padding: 0 5px;
+}
+
+form input:focus {
+    outline: 3px solid #bf55ec;
+}
+
+form button {
+    display: block;
+    width: 150px;
+    margin: 20px auto 0 auto;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0;
+    font-family: 'bold';
+    font-size: 100%;
+    color: white;
+    background-color: #8c14fc;
+}
+
+#error-message {
+    width: 400px;
+    margin: 20px auto;
+    font-family: 'bold';
+    color: white;
+    background-color: #fe7968;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+}

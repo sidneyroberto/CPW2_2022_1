@@ -1,7 +1,6 @@
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 
 import { firebaseApp } from '../../config/firebase'
-import './styles.css'
 
 const $ = document.querySelector.bind(document)
 
@@ -45,13 +44,13 @@ const onSubmitLoginForm = (event: Event) => {
 
 const renderLoginForm = (container: HTMLElement) => {
   const htmlContent = `
-    <form id="login-form">
-      <div class="form-input">
+    <form>
+      <div>
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" required>
       </div>
 
-      <div class="form-input">
+      <div>
         <label for="email">Senha</label>
         <input type="password" id="password" name="password" required>
       </div>
@@ -61,7 +60,7 @@ const renderLoginForm = (container: HTMLElement) => {
   `
 
   container.innerHTML = htmlContent
-  const loginForm = <HTMLFormElement>$('#login-form')
+  const loginForm = <HTMLFormElement>$('form')
   loginForm.onsubmit = onSubmitLoginForm
 }
 
