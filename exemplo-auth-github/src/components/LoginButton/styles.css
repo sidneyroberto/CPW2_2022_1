@@ -1,0 +1,23 @@
+.login-button {
+    display: flex;
+    width: 300px;
+    margin: 50px auto;
+    border: none;
+    border-radius: 10px;
+    background-color: #ececec;
+    padding: 10px;
+    box-shadow: 3px 3px 5px #aaa;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button img {
+    width: 24px;
+    margin-right: 20px;
+}
+
+.login-button span {
+    font-family: 'bold';
+    font-size: 120%;
+}
